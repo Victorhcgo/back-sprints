@@ -4,6 +4,11 @@ const router = express.Router();
 // Task Model
 const Task = require('../models/task');
 
+// router.get('/',  (req, res) => {
+    
+//     res.send('hola mongoAtlas');
+//   });
+
 // GET all Tasks
 router.get('/', async (req, res) => {
   const tasks = await Task.find();
@@ -12,20 +17,16 @@ router.get('/', async (req, res) => {
 
 // GET all Tasks
 router.get('/:id', async (req, res) => {
-  const task = await Task.findById(req.params.id);
-  res.json(task);
+    const task = await Task.findById(req.params.id);
+    res.json(task);
 });
 
 // ADD a new task
-router.post('/', async (req, res) => {
-    try{
+router.post('/', async (req, res) => { 
         const { title, description } = req.body;
         const task = new Task({title, description});
         await task.save();
-        res.json({status: 'Task Saved'});}
-    catch{
-        console.log('error')
-    }
+        res.json({status: 'Task Saved'});
 
 });
 

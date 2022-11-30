@@ -20,7 +20,7 @@ app.use('/api/task' , require('./routes/taskRoutes'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // permitirá crear variables de ambiente customizadas
-
+require('dotenv').config();
 
 //Starting the server
 
