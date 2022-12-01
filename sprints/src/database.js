@@ -1,7 +1,7 @@
 const e = require("express")
 const mongoose = require("mongoose")
 
-KEY = "mongodb+srv://victorhcgo:EQUIPO13@cluster0.yhbgwot.mongodb.net/?retryWrites=true&w=majority"
+KEY = 'mongodb://localhost:27017/base_de_datos'
 
 
 mongoose.connect (KEY)

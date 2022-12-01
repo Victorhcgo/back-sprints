@@ -26,7 +26,8 @@ router.post('/', async (req, res) => {
         const { title, description } = req.body;
         const task = new Task({title, description});
         await task.save();
-        res.json({status: 'Task Saved'});
+        // res.json({status: 'Task Saved'});
+        res.status(200)
 
 });
 
