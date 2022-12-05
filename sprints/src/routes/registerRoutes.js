@@ -7,7 +7,7 @@ const Register = require('../models/register');
 
 router.post('/', async (req, res) => { 
     // const { title, description } = req.body;
-    await Register.create({email: "test", user: "hugo", passwork: "123"})
+    await Register.create({email: "", user: "", passwork: ""})
     
     // res.json({status: 'Task Saved'});
     res.sendStatus(200)

@@ -10,14 +10,11 @@ const LoginSchema = new Schema({
     type: String, 
     required: true },
 
-    email: { 
-        type: String, 
-        required: true }
 },
 
 {
-    collection: 'User'
+    collection: 'Login'
 }
 );
 
-module.exports = mongoose.model('User', RegisterSchema);
+module.exports = mongoose.model('Login', LoginSchema);
